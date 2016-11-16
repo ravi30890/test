@@ -8,8 +8,8 @@ describe('TC1_NewCustomer', function () {
         global.current_TestCase = "TC1_NewCustomer";
     });
     it('TC1_NewCustomer', function () {
-        appLogger.Log("************************ TC1 Execution Started ***************************");
-        appLogger.Log("************************ " + __filename + "***************************");
+        /*appLogger.Log("************************ TC1 Execution Started ***************************");
+        appLogger.Log("************************ " + __filename + "***************************");*/
         homePage.openHome()
             .getNewCustomerPage()
             .fillNewCustomerDetails(global.TIMESTAMP)

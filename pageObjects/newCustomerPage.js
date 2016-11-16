@@ -6,6 +6,7 @@
 'use strict';
 //********** Require Pages*************//
 //**************************** Required web data*************************************//
+requireLibrary('Locator');
 var  genericData = requireData('genericData'),
 //**************************** Page Objects *************************************//
     customerCreationSuccessMessageSection = locatorXpath('//span[@ng-bind-html="content"]'),

@@ -6,6 +6,7 @@
 'use strict';
 
 //**************************** Required web data*************************************//
+requireLibrary('Locator');
 var genericData = requireData('genericData'),
 //**************************** Page Objects *************************************//
     searchCustomerOrAccountNameTextField = locatorModel('filter.filter[col.name].value'),

@@ -4,13 +4,13 @@
 /**
  * Action library
  */
-'use strict';
-var fs = require("fs"),
-    Base64 = require("Base64"),
-    reporter = requireLibrary('reporter'),
-    SelectWrapper = function (selector) {
-        this.webElement = element(selector);
-    };
+ 'use strict';
+ var fs = require("fs"),
+ Base64 = require("Base64"),
+ reporter = requireLibrary('reporter'),
+ SelectWrapper = function (selector) {
+    this.webElement = element(selector);
+};
 
 beforeEach(function () {
     jasmine.addMatchers({
@@ -43,17 +43,13 @@ SelectWrapper.prototype.selectByText = function (text) {
 };
 
 module.exports = {
-    
+
     Get: function(url){
         browser.get(url).then(function () {
-            browser.navigate().refresh().then(function () {
-                Long_Wait();
-                reporter.appendTest('Open URL', 'Successfully Opened URL: ' + url, "PASS");
-            }, function (err) {
-                reporter.appendTest('Browser Refresh', 'Performing Browser Refresh', "FAIL");
-            }, function (err) {
-                reporter.appendTest('Open URL', 'Opening Application URL', "FAIL");
-            });
+            Long_Wait();
+            reporter.appendTest('Open URL', 'Successfully Opened URL: ' + url, "PASS");
+        }, function (err) {
+            reporter.appendTest('Open URL', 'Opening Application URL', "FAIL");
         });
     },
 
@@ -144,7 +140,6 @@ module.exports = {
     },
     moveMouseOnMenuItem: function(mainMenuLocator,menuName){
         try {
-            console.log()
             var menuItem = browser.element.all(mainMenuLocator).filter(function (items) {
                 return items.getText().then(function (text) {
                     return text.indexOf(menuName) === 0;
