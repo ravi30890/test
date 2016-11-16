@@ -9,9 +9,7 @@ describe('TC5_NewAccount-NonEDIActive-RoleSalesRep', function () {
     });
     it('TC5 - New Account - Non EDI Active - Role Sales Rep', function () {
         var accountName = "nonEDI"+global.TIMESTAMP;
-        appLogger.Log("************************ TC5 Execution Started ***************************");
-        appLogger.Log("************************ " + __filename + "***************************");
-        homePage.openHome()
+       homePage.openHome()
             .getNewAccountPage()
             .fillNewAccountDetails(accountName,
                 global.TIMESTAMP,
